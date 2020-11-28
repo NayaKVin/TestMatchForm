@@ -30,8 +30,12 @@ namespace TestMatchForm.Controllers
                 using (MySqlCommand cmmd = new MySqlCommand(query))
                 {
                     cmmd.Connection = conn;
-                    conn.Open();
-                    try { cmmd.ExecuteNonQuery(); }
+
+                    try
+                    {
+                        conn.Open();
+                        cmmd.ExecuteNonQuery();
+                    }
                     catch (Exception e)
                     {
                         Console.WriteLine(e);
@@ -65,9 +69,13 @@ namespace TestMatchForm.Controllers
                     using (MySqlCommand cmmd = new MySqlCommand(query))
                     {
                         cmmd.Connection = conn;
-                        conn.Open();
 
-                        try { cmmd.ExecuteNonQuery(); }
+
+                        try
+                        {
+                            conn.Open();
+                            cmmd.ExecuteNonQuery();
+                        }
                         catch (Exception e)
                         {
                             Console.WriteLine(e);
